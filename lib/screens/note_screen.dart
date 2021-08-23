@@ -109,6 +109,7 @@ class _NoteScreenState extends State<NoteScreen> {
                                   setState(() {
                                     isLoading = false;
                                   });
+                                  Navigator.pop(context);
                                 });
                               } else {
                                 //new
@@ -120,9 +121,11 @@ class _NoteScreenState extends State<NoteScreen> {
                                         title: _titleController.text,
                                         date: DateTime.now()))
                                     .then((value) {
+                                  
                                   setState(() {
                                     isLoading = false;
                                   });
+                                  Navigator.pop(context);
                                 });
                               }
                             },
